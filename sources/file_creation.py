@@ -14,6 +14,12 @@ def create_file(file_name, path):
         print("file_creation", "B001")
         print(e)
         return None
+    try:
+        file.close()
+    except Exception as e:
+        print("file_creation", "B004")
+        print(e)
+        return None
     return file
 
 def create_folder(folder_name, path):
