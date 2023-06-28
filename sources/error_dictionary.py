@@ -16,6 +16,7 @@ error_dictionary = {
         "B002" : "Could not create folder",
         "B003" : "Project already exists",
         "B004" : "Could close file",
+        "B005" : "Could not write in file",
     },
 }
 

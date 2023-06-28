@@ -1,12 +1,12 @@
 {
     "global":
         {
-            "name_of_the_project": "louis",
+            "name_of_the_project": "Andros",
             "path": "~",
             "language": "C",
-            "extension_source": "c",
-            "extension_header": "h",
-            "header": "",
+            "extension_source": "androsfile",
+            "extension_header": "androsheader",
+            "header": "/*\n** EPITECH PROJECT, 2023\n** NAME_OF_THE_PROJECT\n** File description:\n** \n*/",
             "makefile": true,
             "cmake": false
         },

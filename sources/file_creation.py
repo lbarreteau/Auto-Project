@@ -7,13 +7,20 @@
 
 import os
 
-def create_file(file_name, path):
+def create_file(file_name, path, header):
     try:
         file = open(path + file_name, "w")
     except Exception as e:
         print("file_creation", "B001")
         print(e)
         return None
+    if header != "":
+        try:
+            file.write(header + "\n")
+        except Exception as e:
+            print("file_creation", "B005")
+            print(e)
+            return None
     try:
         file.close()
     except Exception as e:
@@ -58,6 +65,11 @@ def init_files(config):
             return None
         for file in config["files"][folder]:
             file = format_global_variables(file, config["global"])
-            if create_file(file, path + "/" + folder + "/") == None:
+            header = ""
+            if file.find(config["global"]["extension_source"]) != -1 or
+            file.find(config["global"]["extension_header"]) != -1:
+                header = config["global"]["header"]
+                header = format_global_variables(header, config["global"])
+            if create_file(file, path + "/" + folder + "/", header) == None:
                 return None
     return True
