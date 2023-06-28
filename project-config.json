@@ -1,0 +1,32 @@
+{
+    "global":
+        {
+            "name_of_the_project": "Andros",
+            "path": "~",
+            "language": "C",
+            "extension_source": "androsfile",
+            "extension_header": "androsheader",
+            "header": "/*\n** EPITECH PROJECT, 2023\n** NAME_OF_THE_PROJECT\n** File description:\n** \n*/",
+            "makefile": true,
+            "cmake": false
+        },
+    "compilation":
+        {
+            "compiler": "gcc",
+            "binary_name": "Luchoooo",
+            "flags": "-Wall -Wextra -Werror -pedantic",
+            "debug_rule": true
+        },
+    "documentation":
+        {
+            "auto_readme": true,
+            "auto_doxyfile": true
+        },
+    "files":
+        {
+            "root": ["README.md", ".gitignore", "Doxyfile"],
+            "includes": ["NAME_OF_THE_PROJECT.EXTENSION_HEADER"],
+            "sources": ["NAME_OF_THE_PROJECT.EXTENSION_SOURCE"],
+            "tests": ["NAME_OF_THE_PROJECT.EXTENSION_SOURCE"]
+        }
+}
